@@ -59,7 +59,7 @@
                         document.documentElement.className += ' id-svg';
                     }
                     var ptrt = RegExp("[\\?&]ptrt=([^&#]*)").exec(document.location.href);
-                    var ENDPOINT_URL = '//' + ((window.location.protocol == "https:") ? ('ssl.bbc.co.uk').replace("www.", "ssl.") : ('ssl.bbc.co.uk').replace("ssl.", "www."));
+                    var ENDPOINT_URL = '//' + ((window.location.protocol === "https:") ? ('ssl.bbc.co.uk').replace("www.", "ssl.") : ('ssl.bbc.co.uk').replace("ssl.", "www."));
                     var ENDPOINT_CONFIG = ('/idcta/config?callback&amp;locale=en-GB&ptrt=' + encodeURI((ptrt ? ptrt[1] : document.location.href))).replace(/\&amp;/g, '&');
                     var ENDPOINT_TRANSLATIONS = '/idcta/translations?callback&locale=en-GB';
                     map['idapp-1'] = '//static.bbc.co.uk/idapp/0.72.58/modules/idapp/idapp-1';
